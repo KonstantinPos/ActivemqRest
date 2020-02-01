@@ -1,4 +1,4 @@
-package com.example.ActivemqRest.controllers;
+package com.example.ActivemqRest.controller;
 
 import com.example.ActivemqRest.model.Manager;
 import com.example.ActivemqRest.model.ManagerResponse;
