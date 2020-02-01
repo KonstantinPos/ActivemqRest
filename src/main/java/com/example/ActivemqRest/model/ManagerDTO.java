@@ -3,10 +3,9 @@ package com.example.ActivemqRest.model;
 import java.util.Date;
 
 public class ManagerDTO {
+
     String serviceName;
-
     private Date serviceTimeStart;
-
     private Date serviceTimeEnd;
 
     public ManagerDTO(String serviceName, Date serviceTimeStart, Date serviceTimeEnd) {
