@@ -1,6 +1,7 @@
 package com.example.ActivemqRest.model;
 
 public class ManagerResponse {
+
     Success success;
     String message;
 
