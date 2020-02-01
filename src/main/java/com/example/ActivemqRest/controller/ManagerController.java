@@ -1,8 +1,8 @@
 package com.example.ActivemqRest.controller;
 
 import com.example.ActivemqRest.model.Manager;
-import com.example.ActivemqRest.model.ManagerResponse;
 import com.example.ActivemqRest.model.ManagerDTO;
+import com.example.ActivemqRest.model.ManagerResponse;
 import com.example.ActivemqRest.model.Success;
 import com.example.ActivemqRest.repository.ManagerRepository;
 import com.google.gson.Gson;
@@ -14,7 +14,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.jms.Queue;
-import java.util.*;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.groupingBy;
@@ -45,7 +48,6 @@ public class ManagerController {
         managers.sort(Comparator.comparing(Manager::getServiceTimeStart));
         return managers.stream().map(m -> new ManagerDTO(m.getServiceName(),
                 m.getServiceTimeStart(), m.getServiceTimeEnd())).collect(Collectors.toList());
-
     }
 
     @PostMapping("/add")
