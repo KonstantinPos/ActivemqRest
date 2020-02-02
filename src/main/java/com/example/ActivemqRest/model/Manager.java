@@ -26,6 +26,13 @@ public class Manager implements Comparable<Manager> {
     @Column(name = "SERVICE_TIME_END")
     private Date serviceTimeEnd;
 
+    public Manager(String serviceName, String managerLogin, Date serviceTimeStart, Date serviceTimeEnd) {
+        this.serviceName = serviceName;
+        this.managerLogin = managerLogin;
+        this.serviceTimeStart = serviceTimeStart;
+        this.serviceTimeEnd = serviceTimeEnd;
+    }
+
     public Manager() {
     }
 
